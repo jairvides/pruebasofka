@@ -37,7 +37,7 @@ startSound = function(id, loop) {
 }
 
 /**
-* The View Model that represents one game of
+* The View Model that represents one game similiar of
 * Who Wants to Be a Millionaire.
 * 
 * @param data the question bank to use
@@ -149,7 +149,7 @@ var MillionaireModel = function(data) {
  			startSound('wrongsound', false);
  			$("#" + elm).css('background', 'red').slideDown('slow', function() {
  				$("#game").fadeOut('slow', function() {
- 					$("#game-over").html('Fin del Juego, reiniciar presiona ctrl +r o F5!');
+ 					$("#game-over").html('Fin del Juego, para reiniciar actualiza la página');
  					$("#game-over").fadeIn('slow');
  					self.transitioning = false;
  				});
