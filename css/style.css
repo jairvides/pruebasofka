@@ -70,7 +70,7 @@ audio {
 
 #game-over {
 	display: none;
-	font-size: 8em;
+	font-size: 3em;
 	font-weight: bold;
 	color: white;
 	width: 980px;
