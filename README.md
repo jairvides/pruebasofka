@@ -5,6 +5,10 @@ Para hacer uso de este juego es necesario usar un aplicativo webserver que puede
 
 El juego carga un banco de preguntas (por defecto questions.json) en la mismo directorio del archivo index.html. Este archivo contiene las preguntas separadas la cual se describe a continuación.
 
+# ¿Cómo Jugar?
+
+En primera instancia una vez cargue exitosamente el archivo index.html, en la parte superior izquierda aparece una lista de números del 1 al 5 que indica los niveles del juego, seleccionar el nivel deseado y dar click sobre el botón iniciar, ¡Disfrutalo!.
+
 # Web Scraping / Banco de preguntas
 
 Para hacer más fácil la recolección de preguntas, incluí un script de python en la carpeta /util que trae la información desde indiabix.com, lo que hice fue modificar algunas preguntas y dejar el resto tal cual vienen desde la web.
