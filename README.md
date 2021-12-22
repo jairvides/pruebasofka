@@ -1,19 +1,19 @@
-# Usage
+# ¿Cómo instalar?
 
-To "install" this game, you will need a simple webserver that can serve static files (Apache will do). You simply upload this git repository into a folder on the web server, and access index.html in your browser.
+Para hacer uso de este juego es necesario usar un aplicativo webserver que puede usar archivos estáticos como apache por ejemplo. Simplemente descarga este repositorio y agregalo a la carpeta de tu web server, en el caso de xammp deberá copiarlo a la carpeta htdocs, y desde la dirección localhost/(nombre de la carpeta) e iniciar el archivo index.html
 
 
-The game loads a question bank (default questions.json) in the same root directory as index.html. This file contains the game-seperated question sets described in the next section.
+El juego carga un banco de preguntas (por defecto questions.json) en la mismo directorio del archivo index.html. Este archivo contiene las preguntas separadas la cual se describe a continuación.
 
-# Scraping / Question bank
+# Web Scraping / Banco de preguntas
 
-To make question harvesting easier, I included a python script in /util that scrapes indiabix.com for questions.
+Para hacer más fácil la recolección de preguntas, incluí un script de python en la carpeta /util que trae la información desde indiabix.com, lo que hice fue modificar algunas preguntas y dejar el resto tal cual vienen desde la web.
 
-The root directory has questions.json which is the main question file, and another question set stored in questions2.json. The program only reads questions.json.
+En el directorio raíz está el archivo questions.json el cual contiene las preguntas principales.
 
-# Question format
+# Formato de las preguntas
 
-The question bank is simply an array of "games". You can have as many "games" as you like. You select them at the beginning of loading index.html.
+El banco de preguntas es un array de "games". Se puede tener varios arrays. la estructura es la siguiente:
 
 	{
 		"games" : [
@@ -26,26 +26,24 @@ The question bank is simply an array of "games". You can have as many "games" as
 		]
 	}
 
-Each array of questions is in the following format.
-
-1.	"content" is the key for the possible answer texts. "content" must have a length of 4 (4 multiple choices).
-2.	The question prompt text is located in the key "question"
-3.	The zero-based index of the value in "content" that is the correct answer is located in the key "correct"
+Cada array de preguntas está en el siguiente formato:
 
 
+1.	"content" es la clave para los posibles textos de respuestas. "content" debe tener al menos 4 opciones.
+2.	La pregunta está localizada en la clave "question".
+3.	El index de el valor en "content" que contiene la respuesta correcta está en la clave "correct".
 
 	    {
-	        "question" : "What is Aurora Borealis commonly known as?",
-	        "content" : [
-	            "Fairy Dust",
-	            "Northern Lights",
-	            "Book of ages",
-	            "a Game of Thrones main character"
-	        ],
-	        "correct" : 1
-	    }
+	    	"question" : "¿Qué significa las siglas TCP?",
+		"content" : [
+		     "Transmitir Computador Paralelo",
+		     "Tasa de Componentes Prácticos",
+		     "Protocolo de Control de Transmisión",
+		     "Protocolo de Internet"
+		 ],
+		 "correct" : 2
+	     }
 
+# Sonidos y Background
 
-# Who Wants to Be a Millionaire Materials
-
-The sounds and images used from Who Wants to Be a Millionaire, and the questions used from India-Bix and other sources are not mine, nor do I claim any involvement in their creation. The materials are used under Fair Use for academic and educational purpose, and should not be redistributed otherwise without permission from their creators.
+Los sonidos son pequeños fragmentos de audios sacados de la web, para uso ambientador del aplicativo.
